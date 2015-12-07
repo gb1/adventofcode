@@ -50,3 +50,14 @@ describe('day2', function(){
     });
 
 });
+
+describe('day3', function(){
+
+    it('should calculate the examples correctly', function(done){
+
+        expect(day3.calculate('>').to.be.equal(2));
+        expect(day3.calculate('^>V<').to.be.equal(4));
+
+    })
+
+})
