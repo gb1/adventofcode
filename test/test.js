@@ -2,6 +2,7 @@
 var expect = require('chai').expect;
 var day1 = require('../day1.js');
 var day2 = require('../day2.js');
+var day3 = require('../day3.js');
 
 describe('test the testing tests', function(){
     it('should pass when tests is working', function(){
@@ -54,10 +55,34 @@ describe('day2', function(){
 describe('day3', function(){
 
     it('should calculate the examples correctly', function(done){
+        expect(day3.calculate('>')).to.be.equal(2);
+        expect(day3.calculate('^>v<')).to.be.equal(4);
+        done();
+    });
 
-        expect(day3.calculate('>').to.be.equal(2));
-        expect(day3.calculate('^>V<').to.be.equal(4));
+    it('should calculate the file input correctly', function(done){
+        day3.calculateTotal(function(result){
+            expect(result).to.be.equal(2565);
+            done();
+        });
+    });
 
-    })
+});
 
-})
+describe('day3-robo-santa', function(){
+
+    it('should calculate the examples correctly', function(done){
+        expect(day3.calculateRoboSanta('^v')).to.be.equal(3);
+        expect(day3.calculate('^>v<')).to.be.equal(3);
+        expect(day3.calculate('^v^v^v^v^v')).to.be.equal(11);
+        done();
+    });
+
+    it('should calculate the file input correctly', function(done){
+        day3.calculateTotalRoboSanta(function(result){
+            expect(result).to.be.equal(1234);
+            done();
+        });
+    });
+
+});

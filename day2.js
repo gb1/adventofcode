@@ -33,7 +33,7 @@ module.exports = {
 
         function process(data) {
 
-            var result = 10;
+            var result;
             var input = data.split('\n');
 
             result = input.reduce(function(sum, curr){
