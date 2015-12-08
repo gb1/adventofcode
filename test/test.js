@@ -3,6 +3,7 @@ var day1 = require('../day1.js');
 var day2 = require('../day2.js');
 var day3 = require('../day3.js');
 var day4 = require('../day4.js');
+var day5 = require('../day5.js');
 
 describe('test the testing tests', function () {
     it('should pass when tests is working', function () {
@@ -93,9 +94,30 @@ describe('day4', function () {
         done();
     });
 
-    it('should calculate the examples correctly', function (done) {
-        this.timeout(30000);
-        expect(day4.calculate('abcdef')).to.be.equal(609043);
-        done();
-    });
+    //too slow to run each time :-S!
+    //it('should calculate the examples correctly', function (done) {
+    //    this.timeout(30000);
+    //    expect(day4.calculate('abcdef')).to.be.equal(609043);
+    //    done();
+    //});
 });
+
+describe('day5', function(){
+
+    it('should calculate the examples correctly', function(){
+        expect(day5.isNice('ugknbfddgicrmopn')).to.be.equal(true);
+        expect(day5.isNice('aaa')).to.be.equal(true);
+        expect(day5.isNice('jchzalrnumimnmhp')).to.be.equal(false);
+        expect(day5.isNice('haegwjzuvuyypxyu')).to.be.equal(false);
+        expect(day5.isNice('dvszwmarrgswjxmb')).to.be.equal(false);
+    });
+
+    it('should calculate the file input correctly', function(done){
+        day5.isNiceTotal(function (result) {
+            expect(result).to.be.equal(238);
+            done();
+        });
+    });
+
+
+})

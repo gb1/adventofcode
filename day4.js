@@ -19,4 +19,4 @@ module.exports = {
     }
 };
 
-console.log(module.exports.calculate('bgvyzdsv'));
+//console.log(module.exports.calculate('bgvyzdsv'));
