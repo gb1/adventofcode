@@ -28,15 +28,15 @@ module.exports = {
     },
 
     isNiceTotal: function(cb){
-        fs.readFile('day5input.txt', 'utf8', function (err, data) {
+        fs.readFile('day5input.txt', 'utf8', (err, data) => {
             if (err) {
                 return console.log(err);
             }
 
-            cb(data.split('\n').reduce(function(sum, curr){
-                if(module.exports.isNice(curr)){
+            cb(data.split('\n').reduce((sum, curr) => {
+                if (module.exports.isNice(curr)) {
                     return sum + 1;
-                }else{
+                } else {
                     return sum;
                 }
             }, 0));
