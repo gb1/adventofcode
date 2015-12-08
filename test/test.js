@@ -93,7 +93,9 @@ describe('day4', function () {
         done();
     });
 
-    it('should calculate the examples correctly', function () {
-        expect(day4.calculate('bgvyzdsv')).to.be.equal(254576);
+    it('should calculate the examples correctly', function (done) {
+        this.timeout(30000);
+        expect(day4.calculate('abcdef')).to.be.equal(609043);
+        done();
     });
 });

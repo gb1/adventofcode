@@ -7,6 +7,7 @@ module.exports = {
     },
 
     calculate: function(input){
+
         var answer = 0;
         var hash = '';
 
@@ -14,6 +15,8 @@ module.exports = {
             hash= md5(input + answer);
             answer++;
         };
-        return answer--;
+        return answer - 1;
     }
 };
+
+console.log(module.exports.calculate('bgvyzdsv'));
