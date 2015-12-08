@@ -24,6 +24,7 @@ module.exports = {
                     return val === arr[index+1];
                 }).length > 0;
         }
+
         return(containsThreeVowels(str) && containsNoNaughtys(str) && containsADouble(str));
     },
 

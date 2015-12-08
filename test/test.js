@@ -4,6 +4,7 @@ var day2 = require('../day2.js');
 var day3 = require('../day3.js');
 var day4 = require('../day4.js');
 var day5 = require('../day5.js');
+var day5p2 = require('../day5p2.js');
 
 describe('test the testing tests', function () {
     it('should pass when tests is working', function () {
@@ -118,6 +119,23 @@ describe('day5', function(){
             done();
         });
     });
+});
+
+describe('day5p2', function(){
+
+    it('should calculate the examples correctly', function(){
+        expect(day5p2.isNice('qjhvhtzxzqqjkmpb')).to.be.equal(true);
+        expect(day5p2.isNice('xxyxx')).to.be.equal(true);
+        expect(day5p2.isNice('uurcxstgmygtbstg')).to.be.equal(false);
+        expect(day5p2.isNice('ieodomkazucvgmuy')).to.be.equal(false);
+    });
+
+    it('should calculate the file input correctly', function(done){
+        day5p2.isNiceTotal(function (result) {
+            expect(result).to.be.equal(69);
+            done();
+        });
+    });
 
 
-})
+});
