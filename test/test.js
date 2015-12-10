@@ -6,6 +6,7 @@ var day4 = require('../day4.js');
 var day5 = require('../day5.js');
 var day5p2 = require('../day5p2.js');
 var day6 = require('../day6.js');
+var day6p2 = require('../day6p2.js');
 
 describe('test the testing tests', function () {
     it('should pass when tests is working', function () {
@@ -148,13 +149,30 @@ describe('day6', function(){
         expect(day6.command('toggle 0,0 through 999,999')).to.be.equal(4);
     });
 
+    //it('should calculate the file input correctly', function(done){
+    //    this.timeout(60000);
+    //    day6.total(function (result) {
+    //        expect(result).to.be.equal(569999);
+    //        done();
+    //    });
+    //});
+
+});
+
+describe('day6p2', function(){
+
+    it('should calculate the examples correctly', function(){
+        //expect(day6p2.command('turn on 0,0 through 0,0')).to.be.equal(1);;
+        //expect(day6p2.command('toggle 0,0 through 999,999')).to.be.equal(2000001);;
+
+    });
+
     it('should calculate the file input correctly', function(done){
         this.timeout(60000);
-        day6.total(function (result) {
+        day6p2.total(function (result) {
             expect(result).to.be.equal(569999);
             done();
         });
     });
-
 });
 
