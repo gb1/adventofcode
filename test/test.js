@@ -7,6 +7,7 @@ var day5 = require('../day5.js');
 var day5p2 = require('../day5p2.js');
 var day6 = require('../day6.js');
 var day6p2 = require('../day6p2.js');
+var day9 = require('../day9.js');
 
 describe('test the testing tests', function () {
     it('should pass when tests is working', function () {
@@ -167,12 +168,40 @@ describe('day6p2', function(){
 
     });
 
-    it('should calculate the file input correctly', function(done){
-        this.timeout(60000);
-        day6p2.total(function (result) {
-            expect(result).to.be.equal(569999);
-            done();
-        });
-    });
+    //it('should calculate the file input correctly', function(done){
+    //    this.timeout(60000);
+    //    day6p2.total(function (result) {
+    //        expect(result).to.be.equal(569999);
+    //        done();
+    //    });
+    //});
 });
+
+describe('day9', function(){
+
+    it('should calculate the examples correctly', function(){
+
+        day9.loadInstruction('London to Dublin = 464');
+        day9.loadInstruction('London to Belfast = 518');
+        day9.loadInstruction('Dublin to Belfast = 141');
+        expect(day9.calculate()).to.be.equal(605);
+    });
+
+    it('should calculate file input correctly', function(done){
+        day9.reset();
+        day9.loadInstructionsFromFile(function(result){
+            expect(result).to.be.equal(207);
+
+        });
+
+        day9.reset();
+        day9.loadInstructionsFromFile(function(result){
+            expect(result).to.be.equal(804);
+            done();
+        }, true);
+    });
+
+});
+
+
 
