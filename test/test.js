@@ -8,6 +8,7 @@ var day5p2 = require('../day5p2.js');
 var day6 = require('../day6.js');
 var day6p2 = require('../day6p2.js');
 var day9 = require('../day9.js');
+var day10 = require('../day10.js');
 
 describe('test the testing tests', function () {
     it('should pass when tests is working', function () {
@@ -201,6 +202,20 @@ describe('day9', function(){
         }, true);
     });
 
+});
+
+describe('day10', function(){
+
+    it('should calculate the examples correctly', function(){
+        expect(day10.lookAndSay('1')).to.be.equal('11');
+        expect(day10.lookAndSay('11')).to.be.equal('21');
+        expect(day10.lookAndSay('21')).to.be.equal('1211');
+        expect(day10.lookAndSay('1211')).to.be.equal('111221');
+        expect(day10.lookAndSay('111221')).to.be.equal('312211');
+        day10.lookAndSayNTimes('1321131112', 40, (digit) =>{
+            expect(digit.length).to.be.equal(492982);
+        });
+    });
 });
 
 
