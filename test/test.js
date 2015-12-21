@@ -212,9 +212,12 @@ describe('day10', function(){
         expect(day10.lookAndSay('21')).to.be.equal('1211');
         expect(day10.lookAndSay('1211')).to.be.equal('111221');
         expect(day10.lookAndSay('111221')).to.be.equal('312211');
-        day10.lookAndSayNTimes('1321131112', 40, (digit) =>{
-            expect(digit.length).to.be.equal(492982);
-        });
+        //day10.lookAndSayNTimes('1321131112', 40, (digit) =>{
+        //    expect(digit.length).to.be.equal(492982);
+        //});
+        //day10.lookAndSayNTimes('1321131112', 50, (digit) =>{
+        //    expect(digit.length).to.be.equal(6989950);
+        //});
     });
 });
 

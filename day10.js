@@ -16,3 +16,4 @@ module.exports = {
     }
 };
 module.exports.lookAndSayNTimes('1321131112', 40, digit => { console.log(digit.length)});
+module.exports.lookAndSayNTimes('1321131112', 50, digit => { console.log(digit.length)});
